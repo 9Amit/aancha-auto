@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .quote-us {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background-image: url('./images/client-a-2.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.9;
+
+        }
+
+        .quote-us .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+
+        }
+
+        .quote-us h2 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: my-ani 5s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes my-ani{
+             from {opacity:0 ;}
+             to {opacity: 1;}
+        }
+        .quote-us p {
+            margin-top: 20px;
+            font-size: 1.5em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            width: 98%;
+            animation: my-ani 7s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <div style="width: 100%;" class="nav-body">
+        <div class="nav-logo">
+            <a class="nav" href="index.html"><img src="./images/Screenshot 2024-10-02 114044.png" alt="app-logo"></a>
+        </div>
+        <img id="ani" src="./images/rickshaw_8342944.png" alt="logo" />
+        <div class="nav-content" id="nav-content">
+            <a class="nav-list" href="index.html">Home</a>
+            <a class="nav-list" href="aboutus.html">About Us</a>
+            <a class="nav-list" href="#">Services</a>
+            <a class="nav-list" href="#">Products</a>
+            <a class="nav-list" href="form.html">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- end navbar -->
+
+    <!-- Full page background with text overlay -->
+    <div class="content-for-about">
+        <div  class="overlay2"></div>
+        <h1>
+            We believe in
+            <span style="color: darkgreen;">Economically</span>
+            Enhancing Lives Of Community Of <span style="color: rgb(234, 242, 8);">Auto Drivers</span>
+        </h1>
+    </div>
+
+    <div class="quote-us">
+        <div class="overlay">
+            <div>
+                <h2 style="color: rgb(99, 191, 99) ; font-size: 50px;">Aamcha Auto
+                
+                </h2>
+                <p>Aamcha Auto is the 1st app in India with <span style="color: rgb(141, 195, 141);">ZERO Commission & ZERO surge charges.</span> While removing the need of middlemen,
+                Aamcha Auto is a win-win for both the riders and the drivers. It's an ideology to increase the income of auto drivers
+                via cutting the commission and decrease the hassle for the riders and make it pocket friendly for both of them.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
