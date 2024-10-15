@@ -7,10 +7,16 @@
     <title>About us</title>
     <link rel="stylesheet" href="./styles.css">
     <style>
-        *{
-            margin: 0px;
-            padding: 0px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
         .quote-us {
             position: relative;
             height: 100vh;
@@ -19,7 +25,6 @@
             background-size: cover;
             background-position: center;
             opacity: 0.9;
-
         }
 
         .quote-us .overlay {
@@ -34,8 +39,6 @@
             align-items: center;
             text-align: center;
             color: white;
-            padding: 20px;
-
         }
 
         .quote-us h2 {
@@ -44,10 +47,17 @@
             animation: my-ani 5s;
             animation-fill-mode: forwards;
         }
-        @keyframes my-ani{
-             from {opacity:0 ;}
-             to {opacity: 1;}
+
+        @keyframes my-ani {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
+
         .quote-us p {
             margin-top: 20px;
             font-size: 1.5em;
@@ -56,7 +66,148 @@
             width: 98%;
             animation: my-ani 7s;
         }
+
+        .what-we-provide {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-weight: bolder;
+            font-size: 70px;
+        }
+
+        h2 {
+            color: #2b2b2b;
+        }
+
+        .features-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            margin: 0 auto;
+                margin-top: 70px;
+
+        }
+
+        .features {
+            display: flex;
+            animation: scroll 16s linear infinite;
+        }
+
+        .feature-card {
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            padding: 50px;
+            width: 250px;
+            transition: transform 0.3s ease-in-out;
+            margin: 0 10px;
+            flex: 0 0 auto;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: scale(1.1);
+        }
+
+        .icon {
+            font-size: 40px;
+        }
+
+        .description {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #6c6868;
+        }
+
+        /* Animation */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Navbar */
+        .nav-body {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-logo img {
+            height: 50px;
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background-color: #333;
+            margin: 4px 0;
+            border-radius: 5px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .nav-content {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .features {
+                flex-wrap: nowrap;
+                overflow-x: scroll;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .features-container {
+                padding: 0 10px;
+            }
+
+            .feature-card {
+                width: 200px;
+                padding: 30px;
+                margin: 0 5px;
+            }
+
+            .icon {
+                font-size: 30px;
+            }
+
+            .description {
+                font-size: 18px;
+            }
+        }
     </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -83,7 +234,7 @@
 
     <!-- Full page background with text overlay -->
     <div class="content-for-about">
-        <div  class="overlay2"></div>
+        <div class="overlay2"></div>
         <h1>
             We believe in
             <span style="color: darkgreen;">Economically</span>
@@ -94,15 +245,55 @@
     <div class="quote-us">
         <div class="overlay">
             <div>
-                <h2 style="color: rgb(99, 191, 99) ; font-size: 50px;">Aamcha Auto
-                
-                </h2>
-                <p>Aamcha Auto is the 1st app in India with <span style="color: rgb(141, 195, 141);">ZERO Commission & ZERO surge charges.</span> While removing the need of middlemen,
-                Aamcha Auto is a win-win for both the riders and the drivers. It's an ideology to increase the income of auto drivers
-                via cutting the commission and decrease the hassle for the riders and make it pocket friendly for both of them.</p>
+                <h2 style="color: rgb(99, 191, 99); font-size: 50px;">Aamcha Auto</h2>
+                <p>Aamcha Auto is the 1st app in India with <span style="color: rgb(141, 195, 141);">ZERO Commission &
+                        ZERO surge charges.</span> While removing the need of middlemen, Aamcha Auto is a win-win for
+                    both the riders and the drivers. It's an ideology to increase the income of auto drivers via cutting
+                    the commission and decrease the hassle for the riders and make it pocket friendly for both of them.
+                </p>
             </div>
         </div>
     </div>
+
+    <section class="what-we-provide">
+        <h2>What We Provide?</h2>
+        <div class="features-container">
+            <div class="features">
+                <div class="feature-card">
+                    <div class="icon">🚗</div>
+                    <div class="description">User Friendly Interface</div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <div class="description">Fast Onboarding</div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📄</div>
+                    <div class="description">Quick Profile Creation</div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">✔️</div>
+                    <div class="description">Verified Drivers</div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⭐</div>
+                    <div class="description">Ride Reviews & Ratings</div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🚨</div>
+                    <div class="description">SOS Safety Features</div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎁</div>
+                    <div class="description">Guaranteed Rewards</div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📞</div>
+                    <div class="description">24x7 Customer Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
