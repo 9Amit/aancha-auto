@@ -21,3 +21,21 @@ function showLogin() {
     document.querySelectorAll('.form')[0].style.display = 'flex';
     document.querySelectorAll('.form')[1].style.display = 'none';
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('.hero, .hero2, .hero-3,.nav-body, .content-for-about, .quote-us, .what-we-provide').forEach(section => {
+        section.classList.add('hidden');
+        observer.observe(section);
+    });
+});

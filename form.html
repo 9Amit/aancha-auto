@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./styles.css">
 
     <style>
+        body{
+            background-color: #f4f4f4;
+        }
        
             .container {
        display: flex;
@@ -17,6 +20,11 @@
        background-color: #f4f4f4;
        margin-top: 10%;
        margin-left: 35%;
+
+       background: #4CAF4F;
+background: -moz-linear-gradient(left, #4CAF4F 0%, #7A8042 42%, #4CAF4F 100%);
+background: -webkit-linear-gradient(left, #4CAF4F 0%, #7A8042 42%, #4CAF4F 100%);
+background: linear-gradient(to right, #4CAF4F 0%, #7A8042 42%, #4CAF4F 100%);
    } 
     </style>
 </head>
@@ -51,7 +59,7 @@
                     <input type="text" placeholder="Username" required>
                     <input type="password" placeholder="Password" required>
                     <button type="submit">Login</button>
-                    <p class="message">Not registered? <a href="#" onclick="showSignup()">Create an account</a></p>
+                    <p  class="message">Not registered? <a style="color: white; background-color: rgb(48, 51, 54); padding: 5px; border-radius: 5px;"  href="#" onclick="showSignup()">Create an account</a></p>
                 </form>
             </div>
             <div class="form">
@@ -61,7 +69,7 @@
                     <input type="email" placeholder="Email" required>
                     <input type="password" placeholder="Password" required>
                     <button type="submit">Signup</button>
-                    <p class="message">Already registered? <a href="#" onclick="showLogin()">Login</a></p>
+                    <p class="message">Already registered? <a style="color: white; background-color: rgb(48, 51, 54); padding: 5px; border-radius: 5px;"href="#" onclick="showLogin()">Login</a></p>
                 </form>
             </div>
         </div>

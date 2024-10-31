@@ -24,7 +24,7 @@
             background-image: url('./images/client-a-2.jpg');
             background-size: cover;
             background-position: center;
-            opacity: 0.9;
+            background-attachment: fixed;
         }
 
         .quote-us .overlay {
@@ -75,6 +75,7 @@
             text-align: center;
             font-weight: bolder;
             font-size: 70px;
+              background-image: linear-gradient(45deg, rgb(94, 228, 16), rgb(19, 172, 11));
         }
 
         h2 {
@@ -86,7 +87,7 @@
             overflow: hidden;
             width: 100%;
             margin: 0 auto;
-                margin-top: 70px;
+            margin-top: 70px;
 
         }
 
@@ -96,7 +97,7 @@
         }
 
         .feature-card {
-            background-color: #e0e0e0;
+            background-color: #2a5a02;
             border-radius: 10px;
             padding: 50px;
             width: 250px;
@@ -117,7 +118,7 @@
         .description {
             margin-top: 10px;
             font-size: 20px;
-            color: #6c6868;
+            color: #fff;
         }
 
         /* Animation */
@@ -206,13 +207,102 @@
                 font-size: 18px;
             }
         }
+     .footer{
+    background-color: #0c0a0a;
+    height: 40vh;
+    width: 100%;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #4caf4f;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link {
+    margin: 0 10px;
+    transition: opacity 0.3s;
+}
+
+.social-link img {
+    width: 30px;
+    height: auto;
+}
+
+.social-link:hover {
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-logo,
+    .footer-links,
+    .footer-social {
+        margin-bottom: 20px;
+    }
+}   
     </style>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <!-- navbar -->
-    <div style="width: 100%;" class="nav-body">
+    <div style="position: fixed;" style="width: 100%;" class="nav-body">
         <div class="nav-logo">
             <a class="nav" href="index.html"><img src="./images/Screenshot 2024-10-02 114044.png" alt="app-logo"></a>
         </div>
@@ -220,9 +310,8 @@
         <div class="nav-content" id="nav-content">
             <a class="nav-list" href="index.html">Home</a>
             <a class="nav-list" href="aboutus.html">About Us</a>
-            <a class="nav-list" href="#">Services</a>
-            <a class="nav-list" href="#">Products</a>
             <a class="nav-list" href="form.html">Contact</a>
+            <a style="background-color: #4caf4f; border-radius: 5px;" class="nav-list" href="#">Download the App</a>
         </div>
         <div class="hamburger" id="hamburger">
             <span></span>
@@ -255,7 +344,7 @@
         </div>
     </div>
 
-    <section class="what-we-provide">
+    <section style="height: 100vh ;" class="what-we-provide">
         <h2>What We Provide?</h2>
         <div class="features-container">
             <div class="features">
@@ -294,6 +383,29 @@
             </div>
         </div>
     </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img style="width: 220px;;" src="./images/Screenshot 2024-10-02 114044.png" alt="app-logo">
+            </div>
+            <div class="footer-links">
+                <a class="footer-link" href="#">Privacy Policy</a>
+                <a class="footer-link" href="#">Terms of Service</a>
+                <a class="footer-link" href="#">Contact Us</a>
+            </div>
+            <div class="footer-social">
+                <a class="social-link" href="#"><img src="./images/facebook-icon.png" alt="Facebook"></a>
+                <a class="social-link" href="#"><img src="./images/twitter-icon.png" alt="Twitter"></a>
+                <a class="social-link" href="#"><img src="./images/instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Aamcha Auto. All rights reserved.</p>
+            <p>Designed with ❤️ by Amit</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+
 </body>
 
 </html>
