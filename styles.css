@@ -223,7 +223,7 @@ html {
     /* Typing and blinking */
     display: inline-block;
     /* Allow for width animation */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(15, 14, 14, 0.3);
     /* Text shadow for depth */
 }
 
@@ -246,7 +246,7 @@ html {
     /* Slightly move up */
     transition: transform 0.5s ease;
     /* Smooth transition */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px black;
 }
 
 /* Hover effect for paragraph */
@@ -489,6 +489,8 @@ body {
     height: 215vh;
     width: 100%;
     background-color: #7bd87f;
+              background-image: linear-gradient(45deg, rgb(83, 123, 60), rgb(227, 237, 227));
+
     margin: 0px;
     padding: 0px;
 }
@@ -509,6 +511,8 @@ body {
     max-width: 900px;
     display: flex;
     justify-content: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
 }
 
 .card {
